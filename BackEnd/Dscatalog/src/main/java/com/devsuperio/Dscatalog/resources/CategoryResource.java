@@ -1,4 +1,5 @@
 package com.devsuperio.Dscatalog.resources;
+import com.devsuperio.Dscatalog.dto.CategoryDTO;
 import com.devsuperio.Dscatalog.entities.Category;
 
 import com.devsuperio.Dscatalog.services.CategoryService;
@@ -19,8 +20,8 @@ public class CategoryResource {
     private CategoryService service;
 
     @GetMapping
-    public ResponseEntity<List<Category>> findAll() {
-        List<Category> list = service.findAll();
+    public ResponseEntity<List<CategoryDTO>> findAll() {
+        List<CategoryDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
 }
